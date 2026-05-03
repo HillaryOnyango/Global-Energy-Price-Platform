@@ -51,19 +51,22 @@ https://www.eia.gov/opendata/
 
 # Project Architecture
 
-```text
-EIA API
-   ↓
-Ingestion Layer
-   ↓
-Raw MongoDB Storage
-   ↓
-Validation Layer
-   ↓
-Transformation Layer
-   ↓
-Curated MongoDB Collections
-   ↓
-Airflow Orchestration
-   ↓
-Flask Reporting API + Dashboard
+global-energy-price-platform/
+│
+├── airflow/
+├── app/
+│   ├── ingestion/
+│   ├── transformation/
+│   ├── validation/
+│   ├── loaders/
+│   ├── services/
+│   └── utils/
+│
+├── flask_app/
+├── config/
+├── tests/
+├── docker/
+├── .env.example
+├── docker-compose.yml
+├── pyproject.toml
+└── README.md
